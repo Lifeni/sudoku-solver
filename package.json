@@ -1,5 +1,5 @@
 {
-  "name": "sudoku-solver",
+  "name": "@lifeni/sudoku-solver",
   "version": "0.0.1",
   "description": "A command line interface Sudoku solver, based on Node.js",
   "main": "./dist/index.js",
@@ -11,7 +11,8 @@
     "build": "tsc -p ."
   },
   "keywords": [
-    "sudoku"
+    "sudoku",
+    "cli"
   ],
   "author": "Lifeni",
   "license": "MIT",
@@ -28,5 +29,13 @@
     "gulp": "^4.0.2",
     "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^4.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lifeni/sudoku-solver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lifeni/sudoku-solver/issues"
+  },
+  "homepage": "https://github.com/Lifeni/sudoku-solver#readme"
 }
