@@ -1,0 +1,32 @@
+{
+  "name": "sudoku-solver",
+  "version": "0.0.1",
+  "description": "A command line interface Sudoku solver, based on Node.js",
+  "main": "./dist/index.js",
+  "bin": {
+    "sudoku-solver": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "sudoku"
+  ],
+  "author": "Lifeni",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.0",
+    "csv-parse": "^4.12.0",
+    "figlet": "^1.5.0",
+    "tracer": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.2.0",
+    "@types/node": "^14.14.5",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^4.0.5"
+  }
+}
