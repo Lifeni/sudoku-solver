@@ -48,8 +48,8 @@ const isFull = (table: Array<any>) => {
     return count === 9 * 9
 }
 
-const find = (table: Array<any>) => {
-    for (let i = 0; i < 9; i++) {
+const find = (table: Array<any>, last = 0) => {
+    for (let i = last; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             if (table[i][j].trim() === "") {
                 const row = getRow(table, i)
@@ -62,7 +62,7 @@ const find = (table: Array<any>) => {
                     }
                     case 1: {
                         table[i][j] = result[0].toString()
-                        table = find(table)
+                        table = find(table, i)
 
                         if (!isFull(table)) {
                             table[i][j] = " "
@@ -74,7 +74,7 @@ const find = (table: Array<any>) => {
                     default: {
                         for (let k = 0; k < result.length; k++) {
                             table[i][j] = result[k].toString()
-                            table = find(table)
+                            table = find(table, i)
 
                             if (!isFull(table)) {
                                 table[i][j] = " "
@@ -94,8 +94,7 @@ const find = (table: Array<any>) => {
 
 const solve = async (data: Array<any>): Promise<Array<any>> => {
     let table = data
-    table = find(table)
-    // console.log("table", table, "\n\n")
+    table = find(table, 0)
     return table
 }
 

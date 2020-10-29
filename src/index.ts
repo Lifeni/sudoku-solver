@@ -11,7 +11,7 @@ import { format } from "./format"
 import { solve } from "./solve"
 import { logger, show } from "./log"
 
-const version = "0.1.2"
+const version = "0.2.0"
 const date = "2020/10/29"
 const description = "A command line interface Sudoku solver, based on Node.js."
 const meta = `v${version} ${date}`

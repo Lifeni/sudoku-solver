@@ -70,6 +70,12 @@ Commands:
   read <file>    read a Sudoku from file
 ```
 
+## Test
+
+```shell script
+$ npm test
+```
+
 ## License
 
 MIT License
