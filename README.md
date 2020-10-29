@@ -19,8 +19,8 @@ $ yarn global add @lifeni/sudoku-solver
 
 You should write Sudoku into a csv file like this:
 
-```cvs
-# example.cvs
+```csv
+# example.csv
 1,, , ,4,8, , ,5
 5,2, ,6, , , ,1,9
  ,7, , , ,1, , ,8
@@ -35,7 +35,7 @@ You should write Sudoku into a csv file like this:
 Run the command to get the result:
 
 ```shell
-$ sudoku-solver example.cvs
+$ sudoku-solver example.csv
 
 ┌───────┬───────┬───────┐
 │ 1 3 6 │ 9 4 8 │ 2 7 5 │
