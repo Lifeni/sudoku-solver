@@ -1,16 +1,4 @@
-const getBox = (table: Array<any>, x: number, y: number): Array<string> => {
-    const dx = Math.floor(x / 3)
-    const dy = Math.floor(y / 3)
-
-    const arr: Array<string> = []
-    for (let i = 0; i < 3; i++) {
-        for (let j = 0; j < 3; j++) {
-            arr.push(table[i + dx * 3][j + dy * 3])
-        }
-    }
-
-    return arr
-}
+import { getBox } from "./box"
 
 const getPossibleNumber = (row: Array<string>, col: Array<string>, box: Array<string>) => {
     const arr: Array<number> = Array(9).fill(0)

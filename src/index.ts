@@ -10,9 +10,10 @@ import program from "commander"
 import { format } from "./format"
 import { solve } from "./solve"
 import { logger, show } from "./log"
+import { check } from "./check"
 
-const version = "0.2.0"
-const date = "2020/10/29"
+const version = "0.2.1"
+const date = "2020/11/17"
 const description = "A command line interface Sudoku solver, based on Node.js."
 const meta = `v${version} ${date}`
 
@@ -31,13 +32,18 @@ program
 
                 const sudoku = await parse(file)
                 const result = await solve(sudoku)
+                const correct = await check(result)
 
-                await format(result)
+                if (!correct) {
+                    console.log(" ❌ This Sudoku may have no solution")
+                    logger.info("This Sudoku may have no solution")
+                } else {
+                    await format(result)
+                    console.timeEnd(" ⏰ Time")
+                    logger.info("Sudoku has been solved")
+                }
 
-                console.timeEnd(" ⏰ Time")
                 console.log("")
-
-                logger.info("Sudoku has been solved")
             } catch (err) {
                 console.error(err.message)
                 logger.error("Read File Error -", err.message)
