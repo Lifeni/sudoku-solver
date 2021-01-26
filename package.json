@@ -1,6 +1,6 @@
 {
   "name": "@lifeni/sudoku-solver",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A command line interface Sudoku solver, based on Node.js",
   "main": "./dist/index.js",
   "bin": {
